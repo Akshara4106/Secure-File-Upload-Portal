@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #1c1c1c, #2c3e50);
+            margin: 0;
+            padding: 40px;
+            color: white;
+        }
+
+        h2 { text-align: center; }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0,255,255,0.3);
+        }
+
+        .total { background: #3498db; }
+        .accepted { background: #2ecc71; }
+        .rejected { background: #e74c3c; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: black;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #2c3e50;
+            color: white;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #00c6ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📊 Admin Dashboard</h2>
+
+<div class="stats">
+    <div class="box total">Total Uploads<br>{{ total }}</div>
+    <div class="box accepted">Accepted<br>{{ accepted }}</div>
+    <div class="box rejected">Rejected<br>{{ rejected }}</div>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Original Name</th>
+        <th>Status</th>
+        <th>Reason</th>
+        <th>Timestamp</th>
+    </tr>
+
+    {% for log in logs %}
+    <tr>
+        <td>{{ log[0] }}</td>
+        <td>{{ log[1] }}</td>
+        <td>{{ log[3] }}</td>
+        <td>{{ log[4] }}</td>
+        <td>{{ log[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/">⬅ Back to Upload</a>
+
+</body>
+</html>
