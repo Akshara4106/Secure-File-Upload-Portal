@@ -70,3 +70,6 @@ The app creates its uploads folder and SQLite database (database.db) when it sta
 ## Demo
 
 [Watch the project demo](./secure-file-upload-demo.mp4)
+
+
+Note: GitHub may not preview this MP4 inline. Open the video file and select **View raw** to play or download it.
