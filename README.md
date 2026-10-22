@@ -65,3 +65,8 @@ The app creates its uploads folder and SQLite database (database.db) when it sta
 - Extension checks alone do not verify a file's actual content or make it safe to open.
 - Upload logs store filenames and timestamps locally; consider privacy and retention before using real user data.
 - The configured request-size check is a basic demo safeguard and should be reviewed and strengthened before deployment.
+
+
+## Demo
+
+[Watch the project demo](./secure-file-upload-demo.mp4)
